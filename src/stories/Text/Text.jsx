@@ -2,34 +2,90 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./text.css";
 import pixel from "./assets/cross-pixel.png";
+import { characterStructures, Å, Ä, Ö } from "./characters";
 
-/**
- * Primary UI component for user interaction
- */
 export const Text = ({ backgroundColor, text, ...props }) => {
-  const test = [0, 1, 1, 0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1];
+  const newText = text.split("");
+  let textArr = [];
+  newText.forEach((letter) => {
+    textArr.push(characterStructures(letter));
+  });
   return (
     <div className="cross-text" {...props}>
-      <div className="cross-letter">
-        {test.map((stitch, index) => (
-          <React.Fragment key={index}>
-            {stitch === 1 ? (
+      {textArr.map((letterStructure, index) => (
+        <div className={`cross-letter `} key={index}>
+          {JSON.stringify(letterStructure) === JSON.stringify(Å) && (
+            <>
               <div
-                className="cross-text-pixel"
+                className="cross-text-pixel outer-top-3"
                 style={{
                   backgroundColor: backgroundColor,
                 }}
               >
-                <img src={pixel} alt="" />
+                <img src={pixel} alt="cross-stitch" />
               </div>
-            ) : (
-              <div className="cross-text-pixel">
-                <div className="cross-text-pixel-empty" />
+            </>
+          )}
+          {JSON.stringify(letterStructure) === JSON.stringify(Ä) && (
+            <>
+              <div
+                className="cross-text-pixel outer-top-1"
+                style={{
+                  backgroundColor: backgroundColor,
+                }}
+              >
+                <img src={pixel} alt="cross-stitch" />
               </div>
-            )}
-          </React.Fragment>
-        ))}
-      </div>
+              <div
+                className="cross-text-pixel outer-top-5"
+                style={{
+                  backgroundColor: backgroundColor,
+                }}
+              >
+                <img src={pixel} alt="cross-stitch" />
+              </div>
+            </>
+          )}
+          {JSON.stringify(letterStructure) === JSON.stringify(Ö) && (
+            <>
+              <div
+                className="cross-text-pixel outer-top-2"
+                style={{
+                  backgroundColor: backgroundColor,
+                }}
+              >
+                <img src={pixel} alt="cross-stitch" />
+              </div>
+              <div
+                className="cross-text-pixel outer-top-4"
+                style={{
+                  backgroundColor: backgroundColor,
+                }}
+              >
+                <img src={pixel} alt="cross-stitch" />
+              </div>
+            </>
+          )}
+          {letterStructure.map((stitch, index) => (
+            <React.Fragment key={index}>
+              {stitch === 1 ? (
+                <div
+                  className="cross-text-pixel"
+                  style={{
+                    backgroundColor: backgroundColor,
+                  }}
+                >
+                  <img src={pixel} alt="cross-stitch" />
+                </div>
+              ) : (
+                <div className="cross-text-pixel">
+                  <div className="cross-text-pixel-empty" />
+                </div>
+              )}
+            </React.Fragment>
+          ))}
+        </div>
+      ))}
     </div>
   );
 };

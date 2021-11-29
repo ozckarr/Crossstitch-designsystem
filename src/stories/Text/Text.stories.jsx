@@ -23,4 +23,5 @@ const Template = (args) => <Text {...args} />;
 export const Default = Template.bind({});
 Default.args = {
   backgroundColor: "black",
+  text: "abcdefghijklimnopqrstuvwxyzåäö",
 };

@@ -1,17 +1,49 @@
+$stitchSize: 0.5em;
+
 .cross-text {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
   .cross-letter {
     display: flex;
     flex-wrap: wrap;
-    width: 2em;
-    padding-right: 0.5em;
+    width: calc(#{$stitchSize} * 5);
+    height: calc(#{$stitchSize} * 5);
+    padding: 0 $stitchSize calc(#{$stitchSize} * 2) 0;
+    position: relative;
+    .outer-top-1,
+    .outer-top-2,
+    .outer-top-3,
+    .outer-top-4,
+    .outer-top-5 {
+      position: absolute !important;
+      top: -$stitchSize;
+    }
+    .outer-top-1 {
+      left: calc(#{$stitchSize} * 0);
+    }
+    .outer-top-2 {
+      left: calc(#{$stitchSize} * 1);
+    }
+    .outer-top-3 {
+      left: calc(#{$stitchSize} * 2);
+    }
+    .outer-top-4 {
+      left: calc(#{$stitchSize} * 3);
+    }
+    .outer-top-5 {
+      left: calc(#{$stitchSize} * 4);
+    }
+
     .cross-text-pixel {
-      height: 0.5em;
-      width: 0.5em;
+      height: $stitchSize;
+      width: $stitchSize;
       position: relative;
       img,
       .cross-text-pixel-empty {
-        height: 0.5em;
-        width: 0.5em;
+        height: $stitchSize;
+        width: $stitchSize;
         position: absolute;
       }
     }
