@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./text.css";
 import pixel from "./assets/cross-pixel.png";
-import { characterStructures, Å, Ä, Ö } from "./characters";
+import { characterStructures, å, ä, Å, Ä, Ö } from "./characters";
 
 export const Text = ({ backgroundColor, text, ...props }) => {
   const newText = text.split("");
@@ -14,7 +14,8 @@ export const Text = ({ backgroundColor, text, ...props }) => {
     <div className="cross-text" {...props}>
       {textArr.map((letterStructure, index) => (
         <div className={`cross-letter `} key={index}>
-          {JSON.stringify(letterStructure) === JSON.stringify(Å) && (
+          {JSON.stringify(letterStructure) === JSON.stringify(å) ||
+          JSON.stringify(letterStructure) === JSON.stringify(Å) ? (
             <>
               <div
                 className="cross-text-pixel outer-top-3"
@@ -25,8 +26,10 @@ export const Text = ({ backgroundColor, text, ...props }) => {
                 <img src={pixel} alt="cross-stitch" />
               </div>
             </>
+          ) : (
+            <></>
           )}
-          {JSON.stringify(letterStructure) === JSON.stringify(Ä) && (
+          {JSON.stringify(letterStructure) === JSON.stringify(Ä) ? (
             <>
               <div
                 className="cross-text-pixel outer-top-1"
@@ -45,8 +48,11 @@ export const Text = ({ backgroundColor, text, ...props }) => {
                 <img src={pixel} alt="cross-stitch" />
               </div>
             </>
+          ) : (
+            <></>
           )}
-          {JSON.stringify(letterStructure) === JSON.stringify(Ö) && (
+          {JSON.stringify(letterStructure) === JSON.stringify(ä) ||
+          JSON.stringify(letterStructure) === JSON.stringify(Ö) ? (
             <>
               <div
                 className="cross-text-pixel outer-top-2"
@@ -65,6 +71,8 @@ export const Text = ({ backgroundColor, text, ...props }) => {
                 <img src={pixel} alt="cross-stitch" />
               </div>
             </>
+          ) : (
+            <></>
           )}
           {letterStructure.map((stitch, index) => (
             <React.Fragment key={index}>
