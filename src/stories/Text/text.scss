@@ -10,7 +10,7 @@ $stitchSize: 0.5em;
     flex-wrap: wrap;
     width: calc(#{$stitchSize} * 5);
     height: calc(#{$stitchSize} * 5);
-    padding: 0 $stitchSize calc(#{$stitchSize} * 2) 0;
+    padding: 0 $stitchSize $stitchSize 0;
     position: relative;
     .outer-top-1,
     .outer-top-2,

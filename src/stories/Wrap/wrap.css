@@ -1,10 +1,140 @@
 .cross-wrap {
-  margin: 0;
+  /* HTML5 display-role reset for older browsers */
   padding: 1em;
   min-height: 100vh;
   min-width: 100vw;
   background-color: bisque;
   background-image: url("./assets/cross-background.png");
   background-size: 1em;
+}
+
+.cross-wrap html,
+.cross-wrap body,
+.cross-wrap div,
+.cross-wrap span,
+.cross-wrap applet,
+.cross-wrap object,
+.cross-wrap iframe,
+.cross-wrap h1,
+.cross-wrap h2,
+.cross-wrap h3,
+.cross-wrap h4,
+.cross-wrap h5,
+.cross-wrap h6,
+.cross-wrap p,
+.cross-wrap blockquote,
+.cross-wrap pre,
+.cross-wrap a,
+.cross-wrap abbr,
+.cross-wrap acronym,
+.cross-wrap address,
+.cross-wrap big,
+.cross-wrap cite,
+.cross-wrap code,
+.cross-wrap del,
+.cross-wrap dfn,
+.cross-wrap em,
+.cross-wrap img,
+.cross-wrap ins,
+.cross-wrap kbd,
+.cross-wrap q,
+.cross-wrap s,
+.cross-wrap samp,
+.cross-wrap small,
+.cross-wrap strike,
+.cross-wrap strong,
+.cross-wrap sub,
+.cross-wrap sup,
+.cross-wrap tt,
+.cross-wrap var,
+.cross-wrap b,
+.cross-wrap u,
+.cross-wrap i,
+.cross-wrap center,
+.cross-wrap dl,
+.cross-wrap dt,
+.cross-wrap dd,
+.cross-wrap ol,
+.cross-wrap ul,
+.cross-wrap li,
+.cross-wrap fieldset,
+.cross-wrap form,
+.cross-wrap label,
+.cross-wrap legend,
+.cross-wrap table,
+.cross-wrap caption,
+.cross-wrap tbody,
+.cross-wrap tfoot,
+.cross-wrap thead,
+.cross-wrap tr,
+.cross-wrap th,
+.cross-wrap td,
+.cross-wrap article,
+.cross-wrap aside,
+.cross-wrap canvas,
+.cross-wrap details,
+.cross-wrap embed,
+.cross-wrap figure,
+.cross-wrap figcaption,
+.cross-wrap footer,
+.cross-wrap header,
+.cross-wrap hgroup,
+.cross-wrap menu,
+.cross-wrap nav,
+.cross-wrap output,
+.cross-wrap ruby,
+.cross-wrap section,
+.cross-wrap summary,
+.cross-wrap time,
+.cross-wrap mark,
+.cross-wrap audio,
+.cross-wrap video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+.cross-wrap article,
+.cross-wrap aside,
+.cross-wrap details,
+.cross-wrap figcaption,
+.cross-wrap figure,
+.cross-wrap footer,
+.cross-wrap header,
+.cross-wrap hgroup,
+.cross-wrap menu,
+.cross-wrap nav,
+.cross-wrap section {
+  display: block;
+}
+
+.cross-wrap body {
+  line-height: 1;
+}
+
+.cross-wrap ol,
+.cross-wrap ul {
+  list-style: none;
+}
+
+.cross-wrap blockquote,
+.cross-wrap q {
+  quotes: none;
+}
+
+.cross-wrap blockquote:before,
+.cross-wrap blockquote:after,
+.cross-wrap q:before,
+.cross-wrap q:after {
+  content: "";
+  content: none;
+}
+
+.cross-wrap table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 /*# sourceMappingURL=wrap.css.map */
