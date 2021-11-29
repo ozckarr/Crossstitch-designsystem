@@ -1,0 +1,19 @@
+.cross-text {
+  .cross-letter {
+    display: flex;
+    flex-wrap: wrap;
+    width: 2em;
+    padding-right: 0.5em;
+    .cross-text-pixel {
+      height: 0.5em;
+      width: 0.5em;
+      position: relative;
+      img,
+      .cross-text-pixel-empty {
+        height: 0.5em;
+        width: 0.5em;
+        position: absolute;
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.cross-text .cross-letter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 2em;
+  padding-right: 0.5em;
+}
+
+.cross-text .cross-letter .cross-text-pixel {
+  height: 0.5em;
+  width: 0.5em;
+  position: relative;
+}
+
+.cross-text .cross-letter .cross-text-pixel img,
+.cross-text .cross-letter .cross-text-pixel .cross-text-pixel-empty {
+  height: 0.5em;
+  width: 0.5em;
+  position: absolute;
+}
+/*# sourceMappingURL=text.css.map */
