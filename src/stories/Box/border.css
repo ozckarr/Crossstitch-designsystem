@@ -1,0 +1,11 @@
+.cross-border {
+  padding: calc(0.5em * 1) !important;
+  background-image: url("./assets/cross-pixel.png");
+  background-size: 0.5em;
+}
+
+.cross-border .cross-border-inner {
+  background-image: url("./assets/cross-background.png");
+  background-size: calc(0.5em * 2);
+}
+/*# sourceMappingURL=border.css.map */

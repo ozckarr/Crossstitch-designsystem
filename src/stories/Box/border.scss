@@ -1,0 +1,11 @@
+$stitchSize: 0.5em;
+
+.cross-border {
+  padding: calc(#{$stitchSize} * 1) !important;
+  background-image: url("./assets/cross-pixel.png");
+  background-size: $stitchSize;
+  .cross-border-inner {
+    background-image: url("./assets/cross-background.png");
+    background-size: calc(#{$stitchSize} * 2);
+  }
+}

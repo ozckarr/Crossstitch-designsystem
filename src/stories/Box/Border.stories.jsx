@@ -1,12 +1,11 @@
 import React from "react";
 import { Wrap } from "../Wrap/Wrap";
-import { Text } from "../Text/Text";
 
-import { Box } from "./Box";
+import { Border } from "./Border";
 
 export default {
-  title: "Box",
-  component: Box,
+  title: "Border",
+  component: Border,
   argTypes: {
     backgroundColor: { control: "color" },
   },
@@ -21,6 +20,6 @@ export default {
   ],
 };
 
-const Template = (args) => <Box {...args} />;
+const Template = (args) => <Border {...args} />;
 
 export const Default = Template.bind({});
