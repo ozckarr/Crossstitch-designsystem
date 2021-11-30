@@ -7,6 +7,13 @@ function App() {
     <div className="App">
       <Wrap>
         <Text text="–Test-" />
+        <Text text="–Test-" />
+        <Text text="–Test-" />
+        <Text text="–Test-" />
+        <Text text="–Test-" />
+        <Text text="–Test-" />
+        <Text text="–Test-" />
+        <Text text="–Test-" />
       </Wrap>
     </div>
   );
