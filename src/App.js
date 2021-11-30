@@ -8,15 +8,15 @@ function App() {
   return (
     <div className="App">
       <Wrap>
-        <Border>
-          <Text text="–Test-" />
-          <Text text="–Test-" />
-          <Text text="–Test-" />
-          <Text text="–Test-" />
-          <Text text="–Test-" />
-          <Text text="–Test-" />
-          <Text text="–Test-" />
-          <Text text="–Test-" />
+        <Border type="lean-left" borderSize={2}>
+          <Text text="-error 404-" />
+          <Text text="-error 404-" />
+          <Text text="-error 404-" />
+          <Text text="-error 404-" />
+          <Text text="-error 404-" />
+          <Text text="-error 404-" />
+          <Text text="-error 404-" />
+          <Text text="-error 404-" />
         </Border>
       </Wrap>
     </div>

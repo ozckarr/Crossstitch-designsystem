@@ -12,9 +12,7 @@ export default {
   decorators: [
     (Story) => (
       <Wrap>
-        <Story>
-          <button>test</button>
-        </Story>
+        <Story />
       </Wrap>
     ),
   ],
@@ -22,4 +20,30 @@ export default {
 
 const Template = (args) => <Border {...args} />;
 
-export const Default = Template.bind({});
+export const Full = Template.bind({});
+Full.args = {
+  backgroundColor: "red",
+  borderSize: 1,
+  type: "full",
+};
+
+export const Half = Template.bind({});
+Half.args = {
+  backgroundColor: "orange",
+  borderSize: 2,
+  type: "half",
+};
+
+export const LeanLeft = Template.bind({});
+LeanLeft.args = {
+  backgroundColor: "green",
+  borderSize: 3,
+  type: "lean-left",
+};
+
+export const LeanRight = Template.bind({});
+LeanRight.args = {
+  backgroundColor: "blue",
+  borderSize: 3,
+  type: "lean-right",
+};

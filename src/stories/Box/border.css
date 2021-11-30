@@ -1,7 +1,25 @@
 .cross-border {
-  padding: calc(0.5em * 1) !important;
+  background-size: 0.5em;
+}
+
+.cross-border.full-style {
   background-image: url("./assets/cross-pixel.png");
   background-size: 0.5em;
+}
+
+.cross-border.half-style {
+  background-image: url("./assets/cross-style-half.png");
+  background-size: calc(0.5em * 2);
+}
+
+.cross-border.lean-left-style {
+  background-image: url("./assets/cross-style-lean-left.png");
+  background-size: calc(0.5em * 3);
+}
+
+.cross-border.lean-right-style {
+  background-image: url("./assets/cross-style-lean-right.png");
+  background-size: calc(0.5em * 3);
 }
 
 .cross-border .cross-border-inner {
