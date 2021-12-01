@@ -6,6 +6,7 @@ import { useWindowSize } from "../assets/modules/screenSize";
 export const Border = ({
   backgroundColor,
   stitchPadding,
+  // Make Border a part of wrap with heightFit and widthFit. Remove afrwewards
   borderSize,
   heightFit,
   widthFit,

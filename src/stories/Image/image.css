@@ -1,0 +1,28 @@
+.cross-image {
+  background-color: white;
+  height: 400px;
+  width: 400px;
+  background-size: cover;
+  -webkit-filter: brightness(1.75);
+          filter: brightness(1.75);
+  background-color: beige;
+}
+
+.cross-image .cross-image-inner {
+  height: 100%;
+  width: 100%;
+  background-image: url("./assets/cross-pixel.png");
+  background-size: calc(0.5em * 2);
+}
+
+.cross-image img {
+  width: 100%;
+  -ms-interpolation-mode: nearest-neighbor;
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: -moz-crisp-edges;
+      image-rendering: -o-pixelated;
+      image-rendering: pixelated;
+  -webkit-filter: blur(8px);
+          filter: blur(8px);
+}
+/*# sourceMappingURL=image.css.map */

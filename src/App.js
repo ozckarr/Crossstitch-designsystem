@@ -1,6 +1,6 @@
 import "./App.css";
 import { Wrap } from "./stories/Wrap/Wrap";
-import { Border } from "./stories/Box/Border";
+import { Border } from "./stories/Border/Border";
 
 import { Text } from "./stories/Text/Text";
 
