@@ -1,22 +1,17 @@
 $stitchSize: 0.5em;
 
 .cross-image {
-  background-color: white;
-  height: 400px;
-  width: 400px;
   background-size: cover;
-  filter: brightness(1.75);
   background-color: beige;
-
+  position: relative;
   .cross-image-inner {
-    height: 100%;
-    width: 100%;
+    position: absolute;
     background-image: url("./assets/cross-pixel.png");
-    background-size: calc(0.5em * 2);
+    background-size: #{$stitchSize};
+    z-index: 1;
   }
-  img {
-    width: 100%;
-    image-rendering: pixelated;
-    filter: blur(8px);
+  canvas {
+    filter: brightness(1.75);
+    position: absolute;
   }
 }

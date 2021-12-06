@@ -1,28 +1,19 @@
 .cross-image {
-  background-color: white;
-  height: 400px;
-  width: 400px;
   background-size: cover;
-  -webkit-filter: brightness(1.75);
-          filter: brightness(1.75);
   background-color: beige;
+  position: relative;
 }
 
 .cross-image .cross-image-inner {
-  height: 100%;
-  width: 100%;
+  position: absolute;
   background-image: url("./assets/cross-pixel.png");
-  background-size: calc(0.5em * 2);
+  background-size: 0.5em;
+  z-index: 1;
 }
 
-.cross-image img {
-  width: 100%;
-  -ms-interpolation-mode: nearest-neighbor;
-      image-rendering: -webkit-optimize-contrast;
-      image-rendering: -moz-crisp-edges;
-      image-rendering: -o-pixelated;
-      image-rendering: pixelated;
-  -webkit-filter: blur(8px);
-          filter: blur(8px);
+.cross-image canvas {
+  -webkit-filter: brightness(1.75);
+          filter: brightness(1.75);
+  position: absolute;
 }
 /*# sourceMappingURL=image.css.map */
