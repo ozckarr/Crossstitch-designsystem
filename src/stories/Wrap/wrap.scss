@@ -125,13 +125,37 @@ $stitchSize: 0.5em;
     border-collapse: collapse;
     border-spacing: 0;
   }
-  padding: calc(#{$stitchSize} * 2);
+  //padding: calc(#{$stitchSize} * 2);
   background-image: url("./assets/cross-background.png");
-  background-size: calc(#{$stitchSize} * 2);
-  min-height: calc(100vh - (#{$stitchSize} * 4));
+  //background-size: calc(#{$stitchSize} * 2);
+  //min-height: calc(100vh - (#{$stitchSize} * 4));
 
   height: 100%;
   max-width: 100vw;
   overflow-y: scroll;
   background-attachment: local;
+  .cross-wrap-border {
+    background-size: $stitchSize;
+    &.full-style {
+      background-image: url("./assets/cross-pixel.png");
+      background-size: $stitchSize;
+    }
+    &.half-style {
+      background-image: url("./assets/cross-style-half.png");
+      background-size: calc(#{$stitchSize} * 2);
+    }
+    &.lean-left-style {
+      background-image: url("./assets/cross-style-lean-left.png");
+      background-size: calc(#{$stitchSize} * 3);
+    }
+    &.lean-right-style {
+      background-image: url("./assets/cross-style-lean-right.png");
+      background-size: calc(#{$stitchSize} * 3);
+    }
+
+    .cross-border-inner {
+      background-image: url("./assets/cross-background.png");
+      background-size: calc(#{$stitchSize} * 2);
+    }
+  }
 }

@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <Wrap>
-        <Border type="lean-left" borderSize={2}>
+        <Border>
           <Text text="-error 404-" />
           <Text text="-error 404-" />
           <Text text="-error 404-" />
