@@ -10,7 +10,6 @@ export const Wrap = ({
 
   type,
   children,
-  stitchSize,
 }) => {
   const { width, height } = useWindowSize();
   const [screenWidth, setScreenWidth] = useState(0);
@@ -19,13 +18,8 @@ export const Wrap = ({
   const calcHeightFit = () => {
     //Height - padding(em) - wrap padding(em*2) / turn to stitchSize
     return (
-      Math.floor(
-        (screenHeight -
-          stitchPadding * stitchSize * 4 -
-          borderSize * stitchSize -
-          stitchSize) /
-          stitchSize
-      ) * stitchSize
+      Math.floor((screenHeight - stitchPadding * 32 - borderSize * 8 - 8) / 8) *
+      8
     );
   };
 
@@ -44,17 +38,14 @@ export const Wrap = ({
     }
   }, [width, height]);
 
-  const paddingRight = (screenWidth % stitchSize) + stitchSize;
+  const paddingRight = (screenWidth % 8) + 8;
   return (
     <div
       className="cross-wrap"
       style={{
-        paddingTop: stitchSize,
-        paddingLeft: stitchSize,
-        paddingBottom: stitchSize,
         paddingRight: paddingRight,
-        backgroundSize: stitchSize * 2,
-        minHeight: screenHeight - stitchSize * 2,
+        backgroundSize: 8 * 2,
+        minHeight: screenHeight - 8 * 2,
       }}
     >
       <div
@@ -86,7 +77,6 @@ Wrap.propTypes = {
   heightFit: PropTypes.bool,
   widthFit: PropTypes.bool,
   type: PropTypes.oneOf(["full", "half", "lean-left", "lean-right"]),
-  stitchSize: PropTypes.number,
 };
 
 Wrap.defaultProps = {
@@ -96,5 +86,4 @@ Wrap.defaultProps = {
   heightFit: false,
   widthFit: false,
   type: "full",
-  stitchSize: 8,
 };

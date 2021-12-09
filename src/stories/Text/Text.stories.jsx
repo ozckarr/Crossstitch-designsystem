@@ -7,7 +7,7 @@ export default {
   title: "Text",
   component: Text,
   argTypes: {
-    backgroundColor: { control: "color" },
+    textColor: { control: "color" },
   },
   decorators: [
     (Story) => (
@@ -22,6 +22,6 @@ const Template = (args) => <Text {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  backgroundColor: "black",
+  textColor: "black",
   text: "abcdefghijklimnopqrstuvwxyzåäö",
 };

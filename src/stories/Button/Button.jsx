@@ -1,50 +1,74 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import './button.css';
+import React, { useState } from "react";
+import PropTypes from "prop-types";
+import "./button.css";
+import { Text } from "../Text/Text.jsx";
 
-/**
- * Primary UI component for user interaction
- */
-export const Button = ({ primary, backgroundColor, size, label, ...props }) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+export const Button = ({
+  labelColor,
+  backgroundColor,
+  backgroundColorHover,
+  backgroundColorClick,
+  borderColor,
+  type,
+  // onclick
+  label,
+  ...props
+}) => {
+  const [currentColor, setCurrentColor] = useState(backgroundColor);
   return (
-    <button
-      type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
-      style={backgroundColor && { backgroundColor }}
-      {...props}
-    >
-      {label}
-    </button>
+    <div className="cross-button" style={{ backgroundColor: borderColor }}>
+      {type === "soft" && (
+        <>
+          <div
+            className="cross-button-soft-side cross-button-soft-side-1"
+            style={{ backgroundColor: borderColor }}
+          ></div>
+          <div
+            className="cross-button-soft-side cross-button-soft-side-2"
+            style={{ backgroundColor: borderColor }}
+          ></div>
+          <div
+            className="cross-button-soft-side cross-button-soft-side-3"
+            style={{ backgroundColor: borderColor }}
+          ></div>
+          <div
+            className="cross-button-soft-side cross-button-soft-side-4"
+            style={{ backgroundColor: borderColor }}
+          ></div>
+        </>
+      )}
+      <div
+        className="cross-button-inner"
+        style={{ backgroundColor: currentColor }}
+        onMouseOver={() => setCurrentColor(backgroundColorHover)}
+        onMouseOut={() => setCurrentColor(backgroundColor)}
+        onMouseDown={() => setCurrentColor(backgroundColorClick)}
+        onMouseUp={() => setCurrentColor(backgroundColorHover)}
+      >
+        <Text textColor={labelColor} text={label} />
+      </div>
+    </div>
   );
 };
 
-Button.propTypes = {
-  /**
-   * Is this the principal call to action on the page?
-   */
-  primary: PropTypes.bool,
-  /**
-   * What background color to use
-   */
+Text.propTypes = {
+  textColor: PropTypes.string,
   backgroundColor: PropTypes.string,
-  /**
-   * How large should the button be?
-   */
-  size: PropTypes.oneOf(['small', 'medium', 'large']),
-  /**
-   * Button contents
-   */
-  label: PropTypes.string.isRequired,
-  /**
-   * Optional click handler
-   */
+  backgroundColorHover: PropTypes.string,
+  backgroundColorClick: PropTypes.string,
+  borderColor: PropTypes.string,
   onClick: PropTypes.func,
+  type: PropTypes.oneOf(["default", "soft", "round"]),
+  label: PropTypes.string,
 };
 
-Button.defaultProps = {
-  backgroundColor: null,
-  primary: false,
-  size: 'medium',
+Text.defaultProps = {
+  textColor: "black",
+  backgroundColor: "white",
+  backgroundColorHover: "lightgrey",
+  backgroundColorClick: "lightSlateGrey",
+  borderColor: "black",
   onClick: undefined,
+
+  label: "",
 };

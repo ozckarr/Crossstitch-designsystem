@@ -1,6 +1,7 @@
 $stitchSize: 0.5em;
 
 .cross-wrap {
+  //  css reset
   html,
   body,
   div,
@@ -125,10 +126,15 @@ $stitchSize: 0.5em;
     border-collapse: collapse;
     border-spacing: 0;
   }
-  //padding: calc(#{$stitchSize} * 2);
+  // real css
+
+  padding-top: $stitchSize;
+  padding-bottom: $stitchSize;
+  padding-left: $stitchSize;
+
   background-image: url("./assets/cross-background.png");
-  //background-size: calc(#{$stitchSize} * 2);
-  //min-height: calc(100vh - (#{$stitchSize} * 4));
+  background-size: calc(#{$stitchSize} * 2);
+  min-height: calc(100vh - (#{$stitchSize} * 4));
 
   height: 100%;
   max-width: 100vw;

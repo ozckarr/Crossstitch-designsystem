@@ -5,6 +5,7 @@ $stitchSize: 0.5em;
   flex-direction: row;
   width: 100%;
   flex-wrap: wrap;
+
   .cross-letter {
     display: flex;
     flex-wrap: wrap;
@@ -12,6 +13,7 @@ $stitchSize: 0.5em;
     height: calc(#{$stitchSize} * 5);
     padding: 0 $stitchSize $stitchSize 0;
     position: relative;
+    user-select: none;
     .outer-top-1,
     .outer-top-2,
     .outer-top-3,

@@ -4,7 +4,7 @@ import "./text.css";
 import pixel from "./assets/cross-pixel.png";
 import { characterStructures, å, ä, Å, Ä, Ö } from "./characters";
 
-export const Text = ({ backgroundColor, text, ...props }) => {
+export const Text = ({ textColor, text, ...props }) => {
   const newText = text.split("");
   let textArr = [];
   newText.forEach((letter) => {
@@ -20,7 +20,7 @@ export const Text = ({ backgroundColor, text, ...props }) => {
               <div
                 className="cross-text-pixel outer-top-3"
                 style={{
-                  backgroundColor: backgroundColor,
+                  backgroundColor: textColor,
                 }}
               >
                 <img src={pixel} alt="cross-stitch" />
@@ -34,7 +34,7 @@ export const Text = ({ backgroundColor, text, ...props }) => {
               <div
                 className="cross-text-pixel outer-top-1"
                 style={{
-                  backgroundColor: backgroundColor,
+                  backgroundColor: textColor,
                 }}
               >
                 <img src={pixel} alt="cross-stitch" />
@@ -42,7 +42,7 @@ export const Text = ({ backgroundColor, text, ...props }) => {
               <div
                 className="cross-text-pixel outer-top-5"
                 style={{
-                  backgroundColor: backgroundColor,
+                  backgroundColor: textColor,
                 }}
               >
                 <img src={pixel} alt="cross-stitch" />
@@ -57,7 +57,7 @@ export const Text = ({ backgroundColor, text, ...props }) => {
               <div
                 className="cross-text-pixel outer-top-2"
                 style={{
-                  backgroundColor: backgroundColor,
+                  backgroundColor: textColor,
                 }}
               >
                 <img src={pixel} alt="cross-stitch" />
@@ -65,7 +65,7 @@ export const Text = ({ backgroundColor, text, ...props }) => {
               <div
                 className="cross-text-pixel outer-top-4"
                 style={{
-                  backgroundColor: backgroundColor,
+                  backgroundColor: textColor,
                 }}
               >
                 <img src={pixel} alt="cross-stitch" />
@@ -80,7 +80,7 @@ export const Text = ({ backgroundColor, text, ...props }) => {
                 <div
                   className="cross-text-pixel"
                   style={{
-                    backgroundColor: backgroundColor,
+                    backgroundColor: textColor,
                   }}
                 >
                   <img src={pixel} alt="cross-stitch" />
@@ -99,11 +99,11 @@ export const Text = ({ backgroundColor, text, ...props }) => {
 };
 
 Text.propTypes = {
-  backgroundColor: PropTypes.string,
+  textColor: PropTypes.string,
   text: PropTypes.string,
 };
 
 Text.defaultProps = {
-  backgroundColor: "black",
+  textColor: "black",
   text: "",
 };

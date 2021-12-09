@@ -1,0 +1,53 @@
+$stitchSize: 0.5em;
+.cross-wrap {
+  .cross-button {
+    padding: $stitchSize;
+    width: fit-content;
+    background-image: url("./assets/cross-pixel.png");
+    background-size: $stitchSize;
+    position: relative;
+    .cross-button-soft-side {
+      height: $stitchSize;
+      width: $stitchSize;
+      background-image: url("./assets/cross-pixel.png");
+      background-size: $stitchSize;
+      position: absolute;
+    }
+    .cross-button-soft-out {
+      height: $stitchSize;
+      width: $stitchSize;
+      background-image: url("./assets/cross-pixel.png");
+      background-size: $stitchSize;
+      position: absolute;
+    }
+    .cross-button-soft-side-1 {
+      left: $stitchSize;
+      top: $stitchSize;
+    }
+    .cross-button-soft-side-2 {
+      right: $stitchSize;
+      top: $stitchSize;
+    }
+    .cross-button-soft-side-3 {
+      left: $stitchSize;
+      bottom: $stitchSize;
+    }
+    .cross-button-soft-side-4 {
+      right: $stitchSize;
+      bottom: $stitchSize;
+    }
+
+    .cross-button-inner {
+      padding: $stitchSize * 2;
+      width: fit-content;
+      background-image: url("./assets/cross-pixel.png");
+      background-size: $stitchSize;
+      .cross-text {
+        .cross-letter {
+          padding: 0 $stitchSize 0 0;
+          user-select: none;
+        }
+      }
+    }
+  }
+}
