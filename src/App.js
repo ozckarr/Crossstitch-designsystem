@@ -1,21 +1,18 @@
 import "./App.css";
 import { Wrap } from "./stories/Wrap/Wrap";
-import { Border } from "./stories/Border/Border";
 
 import { Text } from "./stories/Text/Text";
+
+import { Image } from "./stories/Image/Image";
+
+import test from "./test.png";
 
 function App() {
   return (
     <div className="App">
       <Wrap>
-        <Text text="-error 404-" />
-        <Text text="-error 404-" />
-        <Text text="-error 404-" />
-        <Text text="-error 404-" />
-        <Text text="-error 404-" />
-        <Text text="-error gnjkrehuiger 404-" />
-        <Text text="-error 404-" />
-        <Text text="-error 404-" />
+        <Text textColor="#ff0000" text="Text här" />
+        <Image imageUrl={test} stitchWidth={40} />
       </Wrap>
     </div>
   );

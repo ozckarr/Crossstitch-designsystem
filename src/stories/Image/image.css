@@ -3,17 +3,12 @@
   background-color: beige;
   position: relative;
 }
-
 .cross-image .cross-image-inner {
   position: absolute;
   background-image: url("./assets/cross-pixel.png");
   background-size: 0.5em;
   z-index: 1;
 }
-
 .cross-image canvas {
-  -webkit-filter: brightness(1.75);
-          filter: brightness(1.75);
-  position: absolute;
-}
-/*# sourceMappingURL=image.css.map */
+  filter: brightness(1.75);
+}/*# sourceMappingURL=image.css.map */

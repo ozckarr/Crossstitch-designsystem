@@ -28,7 +28,14 @@ export const Image = ({ imageUrl, stitchWidth }) => {
   }, [imageDimensions.height, imageDimensions.width, imageUrl, stitchWidth]);
 
   return (
-    <div ref={observe} className="cross-image">
+    <div
+      ref={observe}
+      className="cross-image"
+      style={{
+        height: imgHeight,
+        width: imgWidth,
+      }}
+    >
       <div
         className="cross-image-inner"
         style={{

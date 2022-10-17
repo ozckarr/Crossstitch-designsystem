@@ -11,7 +11,6 @@
   overflow-y: scroll;
   background-attachment: local;
 }
-
 .cross-wrap html,
 .cross-wrap body,
 .cross-wrap div,
@@ -100,7 +99,6 @@
   font: inherit;
   vertical-align: baseline;
 }
-
 .cross-wrap article,
 .cross-wrap aside,
 .cross-wrap details,
@@ -114,21 +112,17 @@
 .cross-wrap section {
   display: block;
 }
-
 .cross-wrap body {
   line-height: 1;
 }
-
 .cross-wrap ol,
 .cross-wrap ul {
   list-style: none;
 }
-
 .cross-wrap blockquote,
 .cross-wrap q {
   quotes: none;
 }
-
 .cross-wrap blockquote:before,
 .cross-wrap blockquote:after,
 .cross-wrap q:before,
@@ -136,38 +130,30 @@
   content: "";
   content: none;
 }
-
 .cross-wrap table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-
 .cross-wrap .cross-wrap-border {
   background-size: 0.5em;
 }
-
 .cross-wrap .cross-wrap-border.full-style {
   background-image: url("./assets/cross-pixel.png");
   background-size: 0.5em;
 }
-
 .cross-wrap .cross-wrap-border.half-style {
   background-image: url("./assets/cross-style-half.png");
   background-size: calc(0.5em * 2);
 }
-
 .cross-wrap .cross-wrap-border.lean-left-style {
   background-image: url("./assets/cross-style-lean-left.png");
   background-size: calc(0.5em * 3);
 }
-
 .cross-wrap .cross-wrap-border.lean-right-style {
   background-image: url("./assets/cross-style-lean-right.png");
   background-size: calc(0.5em * 3);
 }
-
 .cross-wrap .cross-wrap-border .cross-border-inner {
   background-image: url("./assets/cross-background.png");
   background-size: calc(0.5em * 2);
-}
-/*# sourceMappingURL=wrap.css.map */
+}/*# sourceMappingURL=wrap.css.map */

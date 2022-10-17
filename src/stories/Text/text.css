@@ -1,22 +1,12 @@
 .cross-text {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   width: 100%;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
-
 .cross-text .cross-letter {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   width: calc(0.5em * 5);
   height: calc(0.5em * 5);
   padding: 0 0.5em 0.5em 0;
@@ -26,7 +16,6 @@
       -ms-user-select: none;
           user-select: none;
 }
-
 .cross-text .cross-letter .outer-top-1,
 .cross-text .cross-letter .outer-top-2,
 .cross-text .cross-letter .outer-top-3,
@@ -35,38 +24,30 @@
   position: absolute !important;
   top: -0.5em;
 }
-
 .cross-text .cross-letter .outer-top-1 {
   left: calc(0.5em * 0);
 }
-
 .cross-text .cross-letter .outer-top-2 {
   left: calc(0.5em * 1);
 }
-
 .cross-text .cross-letter .outer-top-3 {
   left: calc(0.5em * 2);
 }
-
 .cross-text .cross-letter .outer-top-4 {
   left: calc(0.5em * 3);
 }
-
 .cross-text .cross-letter .outer-top-5 {
   left: calc(0.5em * 4);
 }
-
 .cross-text .cross-letter .cross-text-pixel {
   height: 0.5em;
   width: 0.5em;
   position: relative;
 }
-
 .cross-text .cross-letter .cross-text-pixel img,
 .cross-text .cross-letter .cross-text-pixel .cross-text-pixel-empty {
   height: 0.5em;
   width: 0.5em;
   position: absolute;
   left: 0;
-}
-/*# sourceMappingURL=text.css.map */
+}/*# sourceMappingURL=text.css.map */
