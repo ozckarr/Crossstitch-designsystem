@@ -16,7 +16,14 @@ export const Button = ({
 }) => {
   const [currentColor, setCurrentColor] = useState(backgroundColor);
   return (
-    <div className="cross-button" style={{ backgroundColor: borderColor }}>
+    <div
+      className="cross-button"
+      style={{ backgroundColor: borderColor }}
+      onMouseOver={() => setCurrentColor(backgroundColorHover)}
+      onMouseOut={() => setCurrentColor(backgroundColor)}
+      onMouseDown={() => setCurrentColor(backgroundColorClick)}
+      onMouseUp={() => setCurrentColor(backgroundColorHover)}
+    >
       {type === "soft" && (
         <>
           <div
@@ -37,13 +44,29 @@ export const Button = ({
           ></div>
         </>
       )}
+      {type === "round" && (
+        <>
+          <div
+            className="cross-button-round-side cross-button-round-side-1"
+            style={{ backgroundColor: borderColor }}
+          ></div>
+          <div
+            className="cross-button-round-side cross-button-round-side-2"
+            style={{ backgroundColor: borderColor }}
+          ></div>
+          <div
+            className="cross-button-round-side cross-button-round-side-3"
+            style={{ backgroundColor: borderColor }}
+          ></div>
+          <div
+            className="cross-button-round-side cross-button-round-side-4"
+            style={{ backgroundColor: borderColor }}
+          ></div>
+        </>
+      )}
       <div
         className="cross-button-inner"
         style={{ backgroundColor: currentColor }}
-        onMouseOver={() => setCurrentColor(backgroundColorHover)}
-        onMouseOut={() => setCurrentColor(backgroundColor)}
-        onMouseDown={() => setCurrentColor(backgroundColorClick)}
-        onMouseUp={() => setCurrentColor(backgroundColorHover)}
       >
         <Text textColor={labelColor} text={label} />
       </div>

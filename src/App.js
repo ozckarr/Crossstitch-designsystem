@@ -8,16 +8,14 @@ function App() {
   return (
     <div className="App">
       <Wrap>
-        <Border>
-          <Text text="-error 404-" />
-          <Text text="-error 404-" />
-          <Text text="-error 404-" />
-          <Text text="-error 404-" />
-          <Text text="-error 404-" />
-          <Text text="-error 404-" />
-          <Text text="-error 404-" />
-          <Text text="-error 404-" />
-        </Border>
+        <Text text="-error 404-" />
+        <Text text="-error 404-" />
+        <Text text="-error 404-" />
+        <Text text="-error 404-" />
+        <Text text="-error 404-" />
+        <Text text="-error gnjkrehuiger 404-" />
+        <Text text="-error 404-" />
+        <Text text="-error 404-" />
       </Wrap>
     </div>
   );
